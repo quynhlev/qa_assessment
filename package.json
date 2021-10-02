@@ -1,0 +1,33 @@
+{
+  "name": "cucumber-test",
+  "version": "1.0.0",
+  "description": "To test using cypress and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "npx cypress run",
+    "pretest": "rimraf cypress/cucumber-json && rimraf reports && rimraf cypress/screenshots && mkdir cypress/screenshots && rimraf cypress/snapshots && mkdir cypress/snapshots",
+    "test": "npm run pretest && npm run cy:run",
+    "generate-report": "node cucumber-html-report.js"
+  },
+  "keywords": [
+    "cucumber"
+  ],
+  "author": "Quynh Le",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinition": true,
+    "step_definitions": "cypress/integration/step_definitions/**/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json"
+    }
+  },
+  "dependencies": {
+    "cypress": "^8.5.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-image-snapshot": "^4.0.1",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "rimraf": "^3.0.2"
+  }
+}

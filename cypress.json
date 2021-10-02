@@ -1,0 +1,8 @@
+{
+    "testFiles": "features/*.feature",
+    "viewportHeight":1000,
+    "viewportWidth":1366,
+    "video": false,
+    "defaultCommandTimeout": 15000,
+    "pageLoadTimeout": 60000
+}
