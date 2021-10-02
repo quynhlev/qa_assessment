@@ -1,14 +1,5 @@
 # Xendit QA Assessment
 
-## Instruction
-
-Clone the repo:
-
-Git:
-```
-$ git clone <url>
-```
-
 ## Prerequisites
 - [Cypress](https://www.toolsqa.com/cypress/what-is-cypress/)
 - Node v12 or above
